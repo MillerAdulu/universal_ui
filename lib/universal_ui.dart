@@ -15,8 +15,8 @@ class PlatformViewRegistryFix {
   }
 }
 
-class DartUiFix {
+class UniversalUI {
   PlatformViewRegistryFix platformViewRegistry = PlatformViewRegistryFix();
 }
 
-var ui = DartUiFix();
+var ui = UniversalUI();
