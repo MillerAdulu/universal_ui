@@ -1,7 +1,22 @@
 library universal_ui;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter/foundation.dart';
+import 'fake_ui.dart' if (dart.library.html) 'real_ui.dart' as ui_instance;
+
+class PlatformViewRegistryFix {
+  registerViewFactory(dynamic x, dynamic y) {
+    if (kIsWeb) {
+      // ignore: undefined_prefixed_name
+      ui_instance.platformViewRegistry.registerViewFactory(
+        x,
+        y,
+      );
+    } else {}
+  }
 }
+
+class DartUiFix {
+  PlatformViewRegistryFix platformViewRegistry = PlatformViewRegistryFix();
+}
+
+var ui = DartUiFix();
