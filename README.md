@@ -25,7 +25,7 @@ import 'package:universal_ui/universal_ui.dart';
 ```
 
 Then, use the ui object as usual. 
-You don't need to create an alias.
+You don't need to create an alias and add ignore:
 
 ```
 ...
