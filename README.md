@@ -1,14 +1,37 @@
-# universal_ui
+### Universal UI
+Temporary fix for dart: ui
 
-A new Flutter package project.
+### Getting Started
+This plugin is a temporary fix for the dart: ui issue.
 
-## Getting Started
+Some of the issues thread:
+https://github.com/flutter/flutter/issues/41563
+https://github.com/flutter/flutter/issues/43166
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+This solution was not my idea.
+I just published it in pub.dev to make it easier to implement.
+
+If you want me to credit this solution,
+please mail me at flutterlabz@gmail.com.
+
+Because I don't know who suggested it first.
+I hope this plugin can help those who are experiencing the same problem.
+
+### How To Use
+```
+import 'package:universal_ui/universal_ui.dart';
+```
+
+Then, use the ui object as usual. 
+You don't need to create an alias.
+
+```
+...
+ui.platformViewRegistry.registerViewFactory(
+    'iframeElement',
+    (int viewId) => _iframeElement,
+);
+...
+
+```
