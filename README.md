@@ -19,6 +19,7 @@ Because I don't know who suggested it first.
 I hope this plugin can help those who are experiencing the same problem.
 
 ### How To Use
+Import the package.
 ```
 import 'package:universal_ui/universal_ui.dart';
 ```
